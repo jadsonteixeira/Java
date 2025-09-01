@@ -1,5 +1,7 @@
 package poo.exercicios.loiane.aula24;
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("CLASSE LÂMPADA");
@@ -44,8 +46,26 @@ public class Main {
         System.out.println("CLASSE CONTATO");
         Contato contato = new Contato();
         contato.nome = "Jadson";
-        contato.numero = "(84) 912345678";
+        contato.numero = new String[3];
+        contato.numero[0] = "(84) 912345678";
         System.out.println("Nome: " + contato.nome);
-        System.out.println("Número: " + contato.numero);
+        System.out.println("Número: " + contato.numero[0]);
+
+        System.out.println();
+
+        System.out.println("CLASSE LIVRO BIBLIOTECA");
+        LivroBiblioteca livroB = new LivroBiblioteca();
+        livroB.nome = "O Senhor dos Anéis";
+        livroB.autor = "Tolkien";
+        livroB.anoLanc = 1940;
+        livroB.emprestado = true;
+        livroB.dataEntrega = new Date();
+        livroB.emprestadoPara = "Jadson";
+        System.out.println("Nome: " + livroB.nome);
+        System.out.println("Autor : " + livroB.autor);
+        System.out.println("Ano de lançamento: " + livroB.anoLanc);
+        System.out.println("Emprestado? " + livroB.emprestado);
+        System.out.println("Data de entrega: " + livroB.dataEntrega);
+        System.out.println("Emprestado para: " + livroB.emprestadoPara);
     }
 }
