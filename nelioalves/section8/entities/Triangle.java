@@ -1,4 +1,4 @@
-package poo.nelioalves.section8.entities;
+package nelioalves.section8.entities;
 
 public class Triangle {
     public double a;

@@ -1,6 +1,6 @@
-package poo.nelioalves.section8.application;
+package nelioalves.section8.application;
 
-import poo.nelioalves.section8.entities.Triangle;
+import nelioalves.section8.entities.Triangle;
 
 import java.util.Scanner;
 import java.util.Locale;
