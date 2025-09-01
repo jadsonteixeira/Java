@@ -1,4 +1,4 @@
-package poo.loiane.aula24Classes;
+package loianegroner.aula24Classes;
 
 public class TesteCarro {
     public static void main(String[] args) {

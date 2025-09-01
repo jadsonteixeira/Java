@@ -1,4 +1,4 @@
-package poo.guanabara.aula02Classe;
+package guanabara.aula02Classe;
 
 public class Aula02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package poo.guanabara.aula02Classe;
+package guanabara.aula02Classe;
 
 public class Caneta {
     String modelo;

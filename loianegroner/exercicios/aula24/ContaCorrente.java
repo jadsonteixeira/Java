@@ -1,4 +1,4 @@
-package poo.exercicios.loiane.aula24;
+package loianegroner.exercicios.aula24;
 
 public class ContaCorrente {
     int numeroConta;
