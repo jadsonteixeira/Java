@@ -6,10 +6,19 @@ public class Product {
     public int quantity;
 
     // construtor
+    public Product() {
+        // construtor padrão
+    }
+
     public Product(String name, double price, int quantity) {
         this.name = name; // this significa uma referência ao objeto
         this.price = price;
         this.quantity = quantity;
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
     }
 
     // retornar o valor total em estoque
