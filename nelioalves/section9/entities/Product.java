@@ -1,9 +1,9 @@
 package nelioalves.section9.entities;
 
 public class Product {
-    public String name;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
 
     // construtor
     public Product() {
@@ -21,6 +21,27 @@ public class Product {
         this.price = price;
     }
 
+    // get and set
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
     // retornar o valor total em estoque
     public double totalValueInStock() {
         return price * quantity;
@@ -36,6 +57,7 @@ public class Product {
         this.quantity -= quantity;
     }
 
+    // converter o objeto para String
     public String toString() {
         return name
                 + ", $ " + String.format("%.2f", price)
