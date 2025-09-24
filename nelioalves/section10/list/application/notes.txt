@@ -1,0 +1,63 @@
+Explicação dos métodos static da classe Program
+
+public static Integer position(List<Employee> list, int id) {
+    for (int i = 0; i < list.size(); i++) {
+        if (list.get(i).getId() == id) {
+            return i; // devolve a posição do funcionário na lista
+        }
+    }
+    return null;
+}
+
+- Esse método procura o índice (posição) de um funcionário na lista baseado no ID.
+- Ex: se o funcionário de ID 3 está na posição 1 do ArrayList, retorn 1.
+
+if (list.get(i).getId() == id)
+- list.get(i) -> pega o objeto Employee que está guardado na posição i da lista
+- .getId() -> chama o método da classe Employee para pegar o id desse funcionário
+- .get(int index) -> devovle o elemento da posição informada
+EXEMPLO:
+List<String> nomes = new ArrayList<>();
+
+nomes.add("Maria");
+nomes.add("João");
+nomes.add("Carlos");
+
+System.out.println(nomes.get(0)); // Maria
+System.out.println(nomes.get(1)); // João
+System.out.println(nomes.get(2)); // Carlos
+
+-----------------------------------------------------------------------------------------
+
+public static boolean hasId(List<Employee> List, int id) {
+    Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+    return emp != null;
+}
+
+- Esse método verifica se já existe alguém com esse ID na lista.
+- Se achar alguém, retorna true.
+- Se não achar, retorna false.
+- É usado no cadastro, para não permitir IDs duplicados
+
+Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+- Se encontrar alguém com esse id, emp recebe o objeto Employee
+- Se não encontrar, emp recebe null
+
+return emp != null;
+- emp != null significa "emp é diferente de nulo?"
+- Se for diferente de null -> quer dizer que achou alguém na lista -> retorna true
+- Se for igual a null -> não achou ninguém -> retorna false
+
+EXEMPLO:
+- Imagine que uma lista tem só 1 funcionário com ID == 10
+- hasId(list, 10) -> emp recebe aquele funcionário (não é null) -> retorna true
+- hasId(list, 5) -> emp recebe null (não existe esse ID) -> retorna false
+
+OUTRA FORMA:
+if (emp == null){
+    return false;
+} else {
+    return true;
+}
+
+- Mas como emp != null já é uma expressão booleana, dá pra retorna direto
